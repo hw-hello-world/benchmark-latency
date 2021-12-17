@@ -54,6 +54,18 @@ Success       [ratio]                           33.03%
 Status Codes  [code:count]                      0:6651  200:3303  502:46
   #+end_example
 
+- kotlin
+  #+begin_example
+echo "GET http://86be-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
+Requests      [total, rate, throughput]         10000, 1000.12, 216.94
+Duration      [total, attack, wait]             16.636s, 9.999s, 6.637s
+Latencies     [min, mean, 50, 90, 95, 99, max]  31.893µs, 264.675ms, 1.443ms, 685.418ms, 1.815s, 3.614s, 9.793s
+Bytes In      [total, mean]                     90482, 9.05
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           36.09%
+Status Codes  [code:count]                      0:6380  200:3609  502:11
+  #+end_example
+
 * Tools
 1. [[https://github.com/tsenart/vegeta][vegeta - load testing tool]]
 
