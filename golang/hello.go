@@ -8,8 +8,8 @@ import (
 func main() {
     http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
         query := request.URL.Query()
-        firstName := query["firstName"]
-        lastName := query["lastName"]
+        firstName := query["first_name"]
+        lastName := query["last_name"]
         writer.Write([]byte(fmt.Sprintf("[Golang] Hello %s %s", firstName, lastName)))
     })
 

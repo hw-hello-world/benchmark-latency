@@ -1,8 +1,5 @@
-
-# TODO: how to install latest JDK at current folder
+.PHONY: build
 
 build:
-	kotlinc hello.kt -include-runtime -d hello.jar
+	./gradlew build
 
-start: build
-	java -jar hello.jar

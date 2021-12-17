@@ -1,5 +1,10 @@
 #+TITLE: Readme
 
+* Notes
+- ZGC for jdk-17
+  - https://wiki.openjdk.java.net/display/zgc/Main
+  - ~XX:+UseZGC~
+
 * Script
 #+begin_src sh
 echo "GET http://localhost:9001" | vegeta attack -rate 1000 -duration 10s | vegeta report
