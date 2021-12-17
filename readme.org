@@ -30,7 +30,7 @@ Success       [ratio]                           34.50%
 Status Codes  [code:count]                      0:6537  200:3450  502:13
   #+end_example
 
-- rust
+- rust - rocket
   #+begin_example
 echo "GET http://a819-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
 Requests      [total, rate, throughput]         10000, 1000.12, 240.49

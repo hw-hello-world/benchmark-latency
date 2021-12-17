@@ -3,7 +3,6 @@
 #[get("/?<first_name>&<last_name>")]
 fn index(first_name: &str, last_name: &str) -> String {
     let result = format!("[Rust] Hello {} {}", first_name, last_name);
-    // &result[..]
     result
 }
 
