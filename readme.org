@@ -5,85 +5,12 @@
   - https://wiki.openjdk.java.net/display/zgc/Main
   - ~XX:+UseZGC~
 
+- Force one core for all program to have close to apple to apple comparison.
+
 * Script
 #+begin_src sh
 echo "GET http://localhost:9001" | vegeta attack -rate 1000 -duration 10s | vegeta report
 #+end_src
-* Reports
-
-- nodejs
-  #+begin_example
-echo "GET http://98ef-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io" | vegeta attack -rate 1000 -duration 10s | vegeta report
-Requests      [total, rate, throughput]         10000, 1000.12, 257.71
-Duration      [total, attack, wait]             11.331s, 9.999s, 1.332s
-Latencies     [min, mean, 50, 90, 95, 99, max]  29.098µs, 253.976ms, 1.283ms, 1.108s, 1.3s, 2.124s, 2.53s
-Bytes In      [total, mean]                     89670, 8.97
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           29.20%
-Status Codes  [code:count]                      0:7077  200:2920  502:3
-  #+end_example
-
-- golang
-  #+begin_example
-echo "GET http://42c3-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io" | vegeta attack -rate 1000 -duration 10s | vegeta report
-Requests      [total, rate, throughput]         10000, 1000.10, 282.95
-Duration      [total, attack, wait]             12.193s, 9.999s, 2.194s
-Latencies     [min, mean, 50, 90, 95, 99, max]  30.414µs, 255.871ms, 1.306ms, 875.745ms, 1.331s, 2.932s, 4.837s
-Bytes In      [total, mean]                     59544, 5.95
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           34.50%
-Status Codes  [code:count]                      0:6537  200:3450  502:13
-  #+end_example
-
-- rust - rocket
-  #+begin_example
-echo "GET http://a819-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
-Requests      [total, rate, throughput]         10000, 1000.12, 240.49
-Duration      [total, attack, wait]             12.57s, 9.999s, 2.571s
-Latencies     [min, mean, 50, 90, 95, 99, max]  32.569µs, 256.015ms, 1.312ms, 964.736ms, 1.195s, 1.807s, 6.44s
-Bytes In      [total, mean]                     297297, 29.73
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           30.23%
-Status Codes  [code:count]                      0:6822  200:3023  502:155
-  #+end_example
-
-- haskell
-  #+begin_example
-echo "GET http://0a90-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
-Requests      [total, rate, throughput]         10000, 1000.11, 281.07
-Duration      [total, attack, wait]             11.752s, 9.999s, 1.753s
-Latencies     [min, mean, 50, 90, 95, 99, max]  29.083µs, 257.431ms, 1.327ms, 903.532ms, 1.521s, 2.243s, 2.765s
-Bytes In      [total, mean]                     112897, 11.29
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           33.03%
-Status Codes  [code:count]                      0:6651  200:3303  502:46
-  #+end_example
-
-- kotlin (jdk-8)
-  #+begin_example
-echo "GET http://86be-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
-Requests      [total, rate, throughput]         10000, 1000.12, 216.94
-Duration      [total, attack, wait]             16.636s, 9.999s, 6.637s
-Latencies     [min, mean, 50, 90, 95, 99, max]  31.893µs, 264.675ms, 1.443ms, 685.418ms, 1.815s, 3.614s, 9.793s
-Bytes In      [total, mean]                     90482, 9.05
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           36.09%
-Status Codes  [code:count]                      0:6380  200:3609  502:11
-  #+end_example
-
-- kotlin (jdk-17)
-  #+begin_example
-echo "GET http://470d-73-223-252-60.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
-Requests      [total, rate, throughput]         10000, 1000.12, 36.89
-Duration      [total, attack, wait]             10.11s, 9.999s, 110.952ms
-Latencies     [min, mean, 50, 90, 95, 99, max]  31.613µs, 93.096ms, 1.085ms, 1.456ms, 1.712ms, 4.294s, 6.701s
-Bytes In      [total, mean]                     7460, 0.75
-Bytes Out     [total, mean]                     0, 0.00
-Success       [ratio]                           3.73%
-Status Codes  [code:count]                      0:9627  200:373
-  #+end_example
-
-
 
 * Tools
 1. [[https://github.com/tsenart/vegeta][vegeta - load testing tool]]

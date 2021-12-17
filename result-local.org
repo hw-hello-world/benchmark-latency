@@ -1,0 +1,85 @@
+#+TITLE: Result
+
+- kotlin (jdk-17)
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.04, 2000.02
+Duration      [total, attack, wait]             30s, 29.999s, 183.713µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  74.186µs, 167.126µs, 127.282µs, 221.293µs, 269.406µs, 426.032µs, 35.495ms
+Bytes In      [total, mean]                     1200000, 20.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:60000
+  #+end_example
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.03, 2000.02
+Duration      [total, attack, wait]             30s, 30s, 176.063µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  70.356µs, 124.443µs, 105.791µs, 182.82µs, 221.281µs, 303.13µs, 3.77ms
+Bytes In      [total, mean]                     1200000, 20.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:60000
+  #+end_example
+
+- kotlin (jdk-8)
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.03, 1992.95
+Duration      [total, attack, wait]             30s, 30s, 224.177µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  20.456µs, 892.72µs, 113.079µs, 217.522µs, 272.16µs, 783.408µs, 245.434ms
+Bytes In      [total, mean]                     1195760, 19.93
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           99.65%
+Status Codes  [code:count]                      0:212  200:59788
+  #+end_example
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.04, 2000.03
+Duration      [total, attack, wait]             30s, 29.999s, 170.807µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  71.634µs, 130.486µs, 108.352µs, 191.53µs, 230.283µs, 310.993µs, 7.569ms
+Bytes In      [total, mean]                     1200000, 20.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:60000
+  #+end_example
+
+- rust-actix
+  #+begin_example
+  #+end_example
+
+
+- haskell
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.04, 2000.03
+Duration      [total, attack, wait]             30s, 29.999s, 190.004µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  83.797µs, 130.503µs, 122.746µs, 164.841µs, 186.549µs, 234.9µs, 3.684ms
+Bytes In      [total, mean]                     1260000, 21.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:60000
+  #+end_example
+
+- golang
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.03, 2000.03
+Duration      [total, attack, wait]             30s, 29.999s, 92.725µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  66.552µs, 117.98µs, 102.04µs, 177.306µs, 205.835µs, 266.13µs, 2.568ms
+Bytes In      [total, mean]                     1440000, 24.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:60000
+  #+end_example
+
+  #+begin_example
+echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report
+Requests      [total, rate, throughput]         60000, 2000.04, 2000.03
+Duration      [total, attack, wait]             29.999s, 29.999s, 86.359µs
+Latencies     [min, mean, 50, 90, 95, 99, max]  65.502µs, 118.078µs, 100.73µs, 180.069µs, 208.875µs, 268.42µs, 1.387ms
+Bytes In      [total, mean]                     1440000, 24.00
+Bytes Out     [total, mean]                     0, 0.00
+Success       [ratio]                           100.00%
+Status Codes  [code:count]                      200:60000
+  #+end_example
