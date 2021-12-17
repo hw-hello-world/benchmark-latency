@@ -58,4 +58,4 @@ Status Codes  [code:count]                      0:6651  200:3303  502:46
 1. [[https://github.com/tsenart/vegeta][vegeta - load testing tool]]
 
 * References
-1. [[1. https://medium.com/@omkard/kotlin-ktor-vs-golang-performance-eb3c56127373][Kotlin Ktor vs Go performance]]
+1. [[https://medium.com/@omkard/kotlin-ktor-vs-golang-performance-eb3c56127373][Kotlin Ktor vs Go performance]]
