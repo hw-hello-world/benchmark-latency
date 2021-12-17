@@ -16,7 +16,7 @@ fun main() {
             get("/") {
                 val fname = call.request.queryParameters["first_name"]
                 val lname = call.request.queryParameters["last_name"]
-                call.respondText("[kotlin] hello $fname $lname", ContentType.Text.Plain)
+                call.respondText("[Kotlin] hello $fname $lname", ContentType.Text.Plain)
             }
         }
     }

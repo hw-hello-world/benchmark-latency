@@ -24,7 +24,7 @@ handlers = handleHome
  where
   handleHome :: Maybe Text -> Maybe Text -> Handler Text
   handleHome fname lname =
-    return $ (T.pack "Hello, ") <> (fromMaybe "" fname) <> (fromMaybe "" lname)
+    return $ (T.pack "[Haskell] Hello, ") <> (fromMaybe "" fname) <> (fromMaybe "" lname)
 
 app1 :: Application
 app1 = serve (Proxy @API) handlers
