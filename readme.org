@@ -1,0 +1,11 @@
+#+TITLE: Readme
+
+* Script
+#+begin_src sh
+echo "GET http://localhost:9001" | vegeta attack -rate 1000 -duration 1m | vegeta report
+#+end_src
+* Tools
+1. [[https://github.com/tsenart/vegeta][vegeta - load testing tool]]
+* References
+1. [[1. https://medium.com/@omkard/kotlin-ktor-vs-golang-performance-eb3c56127373
+][Kotlin Ktor vs Go performance]]
