@@ -1,0 +1,6 @@
+## set only when compiled in debug mode, i.e, `cargo build`
+[debug]
+port = 8000
+
+[release]
+port = 9001
