@@ -54,7 +54,7 @@ Success       [ratio]                           33.03%
 Status Codes  [code:count]                      0:6651  200:3303  502:46
   #+end_example
 
-- kotlin
+- kotlin (jdk-8)
   #+begin_example
 echo "GET http://86be-2601-648-8801-a0b0-2cf1-3fb8-1fcf-dee7.ngrok.io?first_name=aa&last_name=bb" | vegeta attack -rate 1000 -duration 10s | vegeta report
 Requests      [total, rate, throughput]         10000, 1000.12, 216.94
