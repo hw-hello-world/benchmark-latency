@@ -48,7 +48,6 @@ Status Codes  [code:count]                      200:60000
   #+begin_example
   #+end_example
 
-
 - haskell
   #+begin_example
 echo "GET http://127.0.0.1:9001?first_name=aa&last_name=bb" | vegeta attack -rate 2000 -duration 30s | vegeta report

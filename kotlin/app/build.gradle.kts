@@ -36,8 +36,9 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     // implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
-    // implementation("io.ktor:ktor-http:1.6.7")
     // implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("io.ktor:ktor-client-core:1.6.7")
+    implementation("io.ktor:ktor-client-cio:1.6.7")
     implementation("io.ktor:ktor-server-core:1.6.7")
     implementation("io.ktor:ktor-server-netty:1.6.7")
     implementation("io.ktor:ktor-serialization:1.6.7")
@@ -46,4 +47,7 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("hw.kotlin.benchmark.AppKt")
+
+    // applicationDefaultJvmArgs = listOf("-Dio.ktor.development=true")
+
 }
